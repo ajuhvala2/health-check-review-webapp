@@ -13,7 +13,7 @@ COPY . /app/
 # exposing port number
 EXPOSE 80
 ## health check
-HEALTHCHECK --interval=12s --timeout=12s --start-period=30s \  
+HEALTHCHECK --interval=12s --timeout=12s -- \  
     CMD node healthcheck.js
 # executing web application
 CMD [ "node", "/app/server.js" ]
